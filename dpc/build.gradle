@@ -13,6 +13,23 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    //separate gradle module for script provider.
+    //different buildTypes depend on different script provider modules, one of which is to hard-code.
+
+    flavorDimensions "scriptSource"
+    productFlavors {
+
+        scriptPrototype {
+            dimension "scriptSource"
+        }
+
+        firebaseScripts {
+            dimension "scriptSource"
+        }
+
+    }
+
     buildTypes {
         release {
             minifyEnabled false
