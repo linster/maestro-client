@@ -1,1 +1,1 @@
-include ':dpc', ':scripttestclient', ':scriptingengine'
+include ':dpc', ':scripttestclient', ':scriptingengine', ':scriptableapi'
